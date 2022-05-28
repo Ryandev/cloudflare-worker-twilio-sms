@@ -2,6 +2,13 @@
 
 Deploy your Twiml logic app on Cloudflare workers.
 
+### Demo
+
+CI deployment can be accessed here:
+
+1. SMS [https://twmildemo-production.ryanpowell.workers.dev/sms](https://twmildemo-production.ryanpowell.workers.dev/sms)
+1. Voice [https://twmildemo-production.ryanpowell.workers.dev/voice](https://twmildemo-production.ryanpowell.workers.dev/voice)
+
 ### Setup
 
 Run `yarn setup`
