@@ -17,8 +17,13 @@ Build with `yarn build` & then copy your `dist/worker.js` into your Cloudflare w
 ### Deploy GitHub actions
 
 • Fork project
+
 • Create Cloudflare API token with worker access
+
 • Add secret in github with key:CF_API_TOKEN value:$MY_CLOUDFLARETOKEN
+
 • Create Cloudflare worker
+
 • Update wrangler.toml route point to your worker
+
 • Push to GitHub & wait for completion
