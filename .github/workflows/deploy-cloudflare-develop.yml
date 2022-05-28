@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: Build, Test & Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.14.2'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+      - run: yarn setup
+      - run: yarn build
+      - run: yarn test
+      - name: Publish
+        # https://github.com/cloudflare/wrangler-action/issues/69
+        uses: cloudflare/wrangler-action@next
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          environment: 'dev'

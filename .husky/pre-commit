@@ -1,0 +1,13 @@
+#!/bin/sh
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+. "$SCRIPTDIR"'/_/husky.sh'
+
+yarn run clear-cache
+
+yarn run check-spell &&
+yarn run check-pretty &&
+yarn run check-lint &&
+yarn run test &&
+yarn build

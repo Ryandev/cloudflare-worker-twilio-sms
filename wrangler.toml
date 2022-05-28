@@ -1,0 +1,20 @@
+name = "blabberbot"
+type = "javascript"
+zone_id = ""
+account_id = ""
+route = ""
+workers_dev = true
+compatibility_date = "2022-03-25"
+webpack_config = "webpack.config.js"
+
+[build]
+command = "yarn install && yarn build"
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+route = "twimldemo.ryanpowell.workers.dev"
+
+[env.dev]
+route = "dev.twimldemo.ryanpowell.workers.dev"

@@ -1,0 +1,47 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "ignorePaths": [
+        "**/coverage/**",
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/fixtures/**",
+        "**/public/**",
+        "CHANGELOG.md",
+        "**/changelog.mdx"
+    ],
+    "ignoreRegExpList": [],
+    "dictionaries": [
+        "typescript",
+        "softwareTerms",
+        "node",
+        "en_US",
+        "en_GB",
+        "npm",
+        "html",
+        "companies",
+        "misc",
+        "filetypes",
+        "lorem-ipsum",
+        "local-en-GB",
+        "local-thirdParty",
+        "local-misc"
+    ],
+    "dictionaryDefinitions": [
+        {
+            "name": "local-en-GB",
+            "path": "./.cspell/en-GB.txt",
+            "addWords": true
+        },
+        {
+            "name": "local-thirdParty",
+            "path": "./.cspell/thirdParty.txt",
+            "addWords": true
+        },
+        {
+            "name": "local-misc",
+            "path": "./.cspell/misc.txt",
+            "addWords": true
+        }
+    ]
+}
